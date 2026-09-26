@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: Реестр партнеров</title>
+    <link rel="icon" href="resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== ГЛАВНАЯ ФОРМА (MainWindow) ==================== -->
+<div id="main-window" class="window active">
+    <header class="header">
+        <img class="logo" src="resources/logo.png" alt="Логотип компании">
+        <h1>CRM: Реестр партнеров</h1>
+    </header>
+    <main class="content">
+        <div class="toolbar">
+            <span id="status" class="status">Загрузка данных...</span>
+            <div class="toolbar-actions">
+                <button id="add-btn" class="button button-primary">Добавить партнера</button>
+                <button id="refresh-btn" class="button">Обновить</button>
+            </div>
+        </div>
+        <div id="cards" class="cards"></div>
+    </main>
+</div>
+
+<!-- ==================== ВТОРОЙ ЭКРАН (PartnerWindow) ==================== -->
+<div id="partner-window" class="window">
+    <header class="header">
+        <img class="logo" src="resources/logo.png" alt="Логотип компании">
+        <h1 id="partner-title">CRM: Карточка партнера</h1>
+    </header>
+    <main class="content">
+        <div class="placeholder">
+            <p>Здесь будет форма партнера (Задание 2)</p>
+            <button id="back-btn" class="button">← Назад</button>
+        </div>
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

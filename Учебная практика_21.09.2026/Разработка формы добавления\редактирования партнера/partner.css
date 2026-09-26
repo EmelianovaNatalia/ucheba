@@ -1,0 +1,108 @@
+/* ===== Стили формы партнёра (Задание 2) ===== */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f0f0f0;
+    color: #222;
+}
+
+.window {
+    display: none;
+}
+.window.active {
+    display: block;
+}
+
+/* ===== Шапка ===== */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .logo {
+    height: 44px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #111;
+}
+
+/* ===== Контент ===== */
+.content {
+    max-width: 760px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* ===== Кнопки ===== */
+.button {
+    padding: 8px 18px;
+    border: none;
+    background: #333;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #555;
+}
+
+.button-primary {
+    background: #1a56a0;
+}
+
+.button-primary:hover {
+    background: #134482;
+}
+
+/* ===== Форма редактирования ===== */
+.form {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-control {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fafafa;
+    color: #222;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #1a56a0;
+    background: #fff;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}

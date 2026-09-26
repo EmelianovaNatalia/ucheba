@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: Реестр партнеров</title>
+    <link rel="icon" href="resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== ГЛАВНАЯ ФОРМА (MainWindow) ==================== -->
+<div id="main-window" class="window active">
+    <header class="header">
+        <img class="logo" src="resources/logo.png" alt="Логотип компании">
+        <h1>CRM: Реестр партнеров</h1>
+    </header>
+    <main class="content">
+        <div class="toolbar">
+            <span id="status" class="status">Загрузка данных...</span>
+            <div class="toolbar-actions">
+                <button id="add-btn" class="button button-primary">Добавить партнера</button>
+                <button id="refresh-btn" class="button">Обновить</button>
+            </div>
+        </div>
+        <div id="cards" class="cards"></div>
+    </main>
+</div>
+
+<!-- ==================== ФОРМА РЕДАКТИРОВАНИЯ (PartnerEditWindow) ==================== -->
+<div id="edit-window" class="window">
+    <header class="header">
+        <img class="logo" src="resources/logo.png" alt="Логотип компании">
+        <h1 id="edit-title">CRM: Карточка партнера [Добавление]</h1>
+    </header>
+    <main class="content">
+        <form id="partner-form" class="form" novalidate>
+            <!-- Скрытое поле для хранения ID при редактировании -->
+            <input type="hidden" id="partner-id" value="">
+
+            <div class="form-group">
+                <label for="field-type">Тип партнера *</label>
+                <select id="field-type" class="form-control" required>
+                    <option value="">— выберите тип —</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="field-name">Наименование *</label>
+                <input type="text" id="field-name" class="form-control"
+                       placeholder="Например: ООО Ромашка" required>
+            </div>
+
+            <div class="form-group">
+                <label for="field-director">ФИО директора</label>
+                <input type="text" id="field-director" class="form-control"
+                       placeholder="Фамилия Имя Отчество">
+            </div>
+
+            <div class="form-group">
+                <label for="field-email">Email компании *</label>
+                <input type="text" id="field-email" class="form-control"
+                       placeholder="example@company.ru">
+            </div>
+
+            <div class="form-group">
+                <label for="field-phone">Телефон</label>
+                <input type="text" id="field-phone" class="form-control"
+                       placeholder="+7 (999) 123-45-67">
+            </div>
+
+            <div class="form-group">
+                <label for="field-address">Адрес</label>
+                <input type="text" id="field-address" class="form-control"
+                       placeholder="Город, улица, дом">
+            </div>
+
+            <div class="form-group">
+                <label for="field-inn">ИНН</label>
+                <input type="text" id="field-inn" class="form-control"
+                       placeholder="10 или 12 цифр">
+            </div>
+
+            <div class="form-group">
+                <label for="field-rating">Рейтинг</label>
+                <input type="text" id="field-rating" class="form-control"
+                       placeholder="Целое число от 0">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="back-btn" class="button">Назад</button>
+                <button type="submit" id="save-btn" class="button button-primary">Сохранить</button>
+            </div>
+        </form>
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

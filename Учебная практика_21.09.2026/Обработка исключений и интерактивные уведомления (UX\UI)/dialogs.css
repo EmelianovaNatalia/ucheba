@@ -1,0 +1,64 @@
+/* ===== Диалоговые окна (MessageBox) ===== */
+/*
+ * Три типа диалоговых окон:
+ *   error   — ошибка       (красный крестик ✖)
+ *   warning — предупреждение (жёлтый знак ⚠)
+ *   info    — информация    (синий знак ℹ)
+ *
+ * Подключение: <link rel="stylesheet" href="dialogs.css">
+ */
+
+.dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dialog-overlay.hidden {
+    display: none;
+}
+
+.dialog-box {
+    background: #fff;
+    border: 1px solid #bbb;
+    padding: 24px 28px;
+    min-width: 320px;
+    max-width: 480px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.dialog-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.dialog-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.dialog-message {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    white-space: pre-line;
+    margin-bottom: 20px;
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
