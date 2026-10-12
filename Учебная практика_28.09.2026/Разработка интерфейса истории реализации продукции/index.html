@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: История реализации продукции</title>
+    <link rel="icon" href="resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== ГЛАВНАЯ ФОРМА (MainWindow) ==================== -->
+<div id="main-window" class="window active">
+    <header class="header">
+        <img class="logo" src="resources/logo.png" alt="Логотип компании">
+        <h1>CRM: Реестр партнеров</h1>
+    </header>
+    <main class="content">
+        <div class="toolbar">
+            <span id="status" class="status">Загрузка данных...</span>
+            <div class="toolbar-actions">
+                <button id="history-btn" class="button button-primary">История продаж</button>
+                <button id="refresh-btn" class="button">Обновить</button>
+            </div>
+        </div>
+        <div id="cards" class="cards"></div>
+    </main>
+</div>
+
+<!-- ==================== ИСТОРИЯ РЕАЛИЗАЦИИ (PartnerHistoryWindow) ==================== -->
+<div id="history-window" class="window">
+    <header class="header">
+        <img class="logo" src="resources/logo.png" alt="Логотип компании">
+        <h1 id="history-title">CRM: История реализации продукции</h1>
+    </header>
+    <main class="content">
+        <div class="toolbar">
+            <span id="history-status" class="status"></span>
+            <button id="back-btn" class="button">← Назад</button>
+        </div>
+        <table id="history-table" class="history-table">
+            <thead>
+                <tr>
+                    <th>Наименование продукции</th>
+                    <th>Количество (шт.)</th>
+                    <th>Дата продажи</th>
+                </tr>
+            </thead>
+            <tbody id="history-body"></tbody>
+        </table>
+        <div id="history-empty" class="empty-message" style="display:none;">
+            История реализации отсутствует
+        </div>
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
